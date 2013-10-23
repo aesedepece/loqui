@@ -1,10 +1,8 @@
 'use strict';
 
-if (navigator.mozAlarms) {
-  navigator.mozSetMessageHandler("alarm", function (message) {
-    App.alarmSet(message.data);
-  });
-}
+Lungo.init({
+  name: 'Loqui'
+});
 
 $('document').ready(function(){
   setTimeout(function(){
@@ -28,8 +26,15 @@ $('document').ready(function(){
       platform: (Lungo.Core.environment().os ? Lungo.Core.environment().os.name : 'PC')
     });
     bindings();
+      App.run();
   });
 });
+
+if (navigator.mozAlarms) {
+  navigator.mozSetMessageHandler("alarm", function (message) {
+    App.alarmSet(message.data);
+  });
+}
 
 // Reconnect on new WiFi / 3G connection
 document.body.addEventListener('online', function () {
