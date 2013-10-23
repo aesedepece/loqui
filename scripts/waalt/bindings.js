@@ -17,10 +17,17 @@ $('document').ready(function(){
       var local = _(original);
       $(this).attr('placeholder', local);
     });
+    $('[data-menu-onclick]').each(function () {
+      var menu = $(this).data('menu-onclick');
+      $(this).on('click', function () {
+        Menu.show(menu, this[0]);
+      });
+    });
     App.defaults.Connector.presence.status = _('DefaultStatus', {
       app: App.name,
       platform: (Lungo.Core.environment().os ? Lungo.Core.environment().os.name : 'PC')
-    })
+    });
+    bindings();
   });
 });
 
@@ -129,3 +136,21 @@ Strophe.Connection.rawInput = function (data) {
 Strophe.Connection.rawOutput = function (data) {
   console.log(data);
 };
+
+var bindings = function () {
+  $('section#success button.start').on('click', function() {
+    App.start();
+  });
+  $('section#contactAdd button.add').on('click', function() {
+    Messenger.contactAdd();
+  });
+  $('section#chat #footbox #say').on('click', function() {
+    Messenger.say();
+  });
+  $('section#chat nav#plus a.cancel').on('click', function() {
+    $(this).parent().removeClass("show")
+  });
+  $('section#chat nav#plus a.bolt').on('click', function() {
+    Plus.bolt();
+  });
+}
