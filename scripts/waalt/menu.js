@@ -48,6 +48,16 @@ var Menu = {
     emoji: function () {
       $('section#chat nav#plus').removeClass('show');
       Lungo.Router.article('chat', 'emoji');
+    },
+    call: function () {
+      $('section#chat nav#plus').removeClass('show');
+      Lungo.Router.article('chat', 'call');
+      Plus.rtc({audio: true, video: false});
+    },
+    videocall: function () {
+      $('section#chat nav#plus').removeClass('show');
+      Lungo.Router.article('chat', 'videocall');
+      Plus.rtc({audio: true, video: true});
     }
   },
   

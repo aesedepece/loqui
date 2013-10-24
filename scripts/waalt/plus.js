@@ -22,6 +22,10 @@ var Plus = {
   emoji: function (emoji) {
     Lungo.Router.article('chat', 'main');
     Messenger.say(emoji);
+  },
+  
+  rtc: function (constraints) {
+    
   }
   
 }
