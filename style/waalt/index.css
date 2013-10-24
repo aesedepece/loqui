@@ -538,6 +538,60 @@ section#chat article#emoji button {
   width: 100%;
 }
 
+section#chat article#call {
+  padding: 1rem;
+}
+section#chat article#call h1 {
+  font-size: 1.2rem;
+  border-bottom: .1rem solid #AAA;
+  color: #444;
+}
+section#chat article#call ul {
+  height: calc(100% - 5.5rem);
+  margin-bottom: .8rem;
+  overflow: scroll;
+  list-style-type: none;
+}
+section#chat article#call ul li {
+  padding: 1rem;
+  float: left;
+  cursor: pointer;
+}
+section#chat article#call ul li img {
+  width: 2rem;
+  height: 2rem;
+}
+section#chat article#call button {
+  width: 100%;
+}
+
+section#chat article#videocall {
+  padding: 1rem;
+}
+section#chat article#videocall h1 {
+  font-size: 1.2rem;
+  border-bottom: .1rem solid #AAA;
+  color: #444;
+}
+section#chat article#videocall ul {
+  height: calc(100% - 5.5rem);
+  margin-bottom: .8rem;
+  overflow: scroll;
+  list-style-type: none;
+}
+section#chat article#videocall ul li {
+  padding: 1rem;
+  float: left;
+  cursor: pointer;
+}
+section#chat article#videocall ul li img {
+  width: 2rem;
+  height: 2rem;
+}
+section#chat article#videocall button {
+  width: 100%;
+}
+
 section.profile div#card {
   background-color: #222;
   color: #FFF;
