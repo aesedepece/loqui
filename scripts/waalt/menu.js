@@ -49,6 +49,9 @@ var Menu = {
       $('section#chat nav#plus').removeClass('show');
       Lungo.Router.article('chat', 'emoji');
     },
+    poweroff: function () {
+      window.close();
+    },
     call: function () {
       $('section#chat nav#plus').removeClass('show');
       Lungo.Router.article('chat', 'call');
